@@ -21,6 +21,8 @@ using Me = System.Data.Linq.SqlClient;
 using System.Runtime.Versioning;
 using System.Runtime.CompilerServices;
 
+using Microsoft.Data.SqlClient;
+
 namespace System.Data.Linq.SqlClient {
     public sealed class Sql2000Provider : SqlProvider {
         public Sql2000Provider()
@@ -1141,7 +1143,7 @@ namespace System.Data.Linq.SqlClient {
                     if (piScale != null) {
                         scale = (int)Convert.ChangeType(piScale.GetValue(p, null), typeof(int), CultureInfo.InvariantCulture);
                     }                
-                    var sp = p as System.Data.SqlClient.SqlParameter;
+                    var sp = p as Microsoft.Data.SqlClient.SqlParameter;
                     writer.WriteLine("-- {0}: {1} {2} (Size = {3}; Prec = {4}; Scale = {5}) [{6}]", 
                         p.ParameterName, 
                         p.Direction, 

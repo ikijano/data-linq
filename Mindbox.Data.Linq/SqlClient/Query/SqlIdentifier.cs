@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
+using Microsoft.Data.SqlClient;
+
 namespace System.Data.Linq.SqlClient {
 
     internal static class SqlIdentifier

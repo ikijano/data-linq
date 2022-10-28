@@ -10,6 +10,8 @@ using System.Reflection;
 using System.Text;
 using System.Transactions;
 
+using Microsoft.Data.SqlClient;
+
 namespace System.Data.Linq.SqlClient {
     using System.Data.Linq;
     using System.Data.Linq.Provider;
